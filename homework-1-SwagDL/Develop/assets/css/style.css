@@ -16,18 +16,21 @@ header {
     color: #ffffff;
 }
 
-header h1 {
+/* Removed header element, as there is only one h1 element on the page. */
+h1 {
     display: inline-block;
     font-size: 48px;
 }
 
-/* Adjusted class '.seo' to just element 'span', as it is only used once */
-header h1 span {
+/* Adjusted class '.seo' to just element 'span', as it is only used once. Also no need for specific
+   elements beforehand, as span is only seen once on the page */
+span {
     color: #d9dcd6;
 }
 
-/* Adjusting div elements to nav elements to match the html code */
-header nav {
+/* Adjusting div elements to nav elements to match the html code. Also no need for specific
+   elements beforehand, as this is the only nav tag on the page */
+nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
@@ -35,11 +38,13 @@ header nav {
     font-size: 20px;
 }
 
-header nav ul {
+/* No need for specific element calls, as this is the only ul tag on the page */
+ul {
     list-style-type: none;
 }
 
-header nav ul li {
+/* No need for specific element calls, since there is only one list on the page */
+li {
     display: inline-block;
     margin-left: 25px;
 }
@@ -53,7 +58,8 @@ p {
     font-size: 16px;
 }
 
-.hero {
+/* Adjusted div to semantic element */
+figure {
     height: 800px;
     width: 100%;
     margin-bottom: 25px;
@@ -72,10 +78,36 @@ p {
     margin-left: 25px;
 }
 
-.content {
+/* Content class was removed and replaced with a semantic element, adjust to match HTML code */
+article {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
+}
+
+/* Moved the content/section items before the aside to line up with HTML code */
+/* At first, adjusted since three different classes have the same styled content and merged under one class, but now
+   calling upon an element within another element instead */
+article section {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+/* Same as above, three different classes merged to one class and changed to a single element to call upon elements
+   within the hierarchy */
+article section img {
+    max-height: 200px;
+}
+
+/* Same as above, three different classes merged to one class and changed to a single element to call upon elements
+   within the hierarchy */
+article section h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
 }
 
 /* No need to call on on class, as we only need 'aside' element */
@@ -107,67 +139,14 @@ aside section img {
     max-width: 150px;
 }
 
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
-    max-height: 200px;
-}
-
-.online-reputation-management img {
-    max-height: 200px;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.footer {
+/* Changing from class footer to just footer element */
+footer {
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
 
-.footer h2 {
+footer h2 {
     font-size: 20px;
 }
